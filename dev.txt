@@ -12,4 +12,10 @@ docker inspect deo-sonarqube um ip von sonarqube herauszufinden
 
 einloggen auf sonarqube und bestätigen und token kopieren und in vscode bei token einfügen und verbinden.
 
-dann project auf sonarqube local erzeugen
+dann project auf sonarqube local erzeugen und regeln dafür festlegen
+
+
+deo actions runner:
+docker build -t deo-actions-runner:latest -f .\deo-actions-runner.Dockerfile . 
+zum installieren und dann zum ausführen:
+docker run --name docker-actions-runner -ti --network deo-network deo-actions-runner:latest
